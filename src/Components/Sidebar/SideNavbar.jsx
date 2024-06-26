@@ -11,7 +11,7 @@ const SideNavbar = ({ sidebarOpen, setSidebarOpen }) => {
     };
 
     return (
-        <nav className=' flex justify-between items-center md:px-5 py-2 px-2 bg-zinc-50 shadow-md  '>
+        <nav className=' flex justify-between items-center md:px-5 py-2 px-2 bg-zinc-50 shadow-md   '>
             <div className=' flex  gap-4'>
                 <AlignLeft onClick={toggleSidebar} className=' cursor-pointer' />
                 <h5 className=' font-semibold'>ShopingCard</h5>
