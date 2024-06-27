@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 
 
 
-const SideNavbar = ({ sidebarOpen, setSidebarOpen }) => {
+const AdminNavbar = ({ sidebarOpen, setSidebarOpen }) => {
     const [AccountMenu, setAccountMenu] = useState(false)
     const toggleSidebar = () => {
         setSidebarOpen(prevState => (prevState === 280 ? 0 : 280));
@@ -46,4 +46,4 @@ const SideNavbar = ({ sidebarOpen, setSidebarOpen }) => {
     )
 }
 
-export default SideNavbar
+export default AdminNavbar

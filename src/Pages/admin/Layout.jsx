@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Sidebar from '../../Components/Sidebar/Sidebar'
-import SideNavbar from '../../Components/Sidebar/SideNavbar'
+import AdminNavbar from '../../Components/Sidebar/SideNavbar'
 
 const AdminLayout = ({ children }) => {
     const [sidebarOpen, setSidebarOpen] = useState(280)
@@ -11,7 +11,7 @@ const AdminLayout = ({ children }) => {
             </aside>
             <section className=' w-full bg-zinc-100  min-h-screen ' style={{ marginLeft: sidebarOpen, transition: "0.3s" }}  >
                 <header>
-                    <SideNavbar setSidebarOpen={setSidebarOpen} />
+                    <AdminNavbar setSidebarOpen={setSidebarOpen} />
                 </header>
                 <main>
                     <div className='p-4 '>

@@ -54,15 +54,15 @@ const Order = () => {
             date: "12/02/2024 10:03:43 AM",
             status: "pending....",
         },
-        
+
     ])
     return (
         <AdminLayout>
             <div>
                 <h1 className=' text-2xl my-5 ml-3 font-semibold'>Order</h1>
-                <table className=' w-full'>
+                <table className=' w-full shadow-lg '>
                     <thead>
-                        <tr className=' bg-zinc-200 border-b-2 border-zinc-400 '>
+                        <tr className=' shadow-md bg-zinc-200 border-b-2 border-zinc-400 '>
                             <th>Orderid</th>
                             <th className=' py-4'>Customer Name </th>
                             <th>Email</th>
@@ -76,8 +76,8 @@ const Order = () => {
                     <tbody>
 
                         {
-                            Order.map((item, index) => (
-                                <tr key={index} className=' text-center bg-white border-b-2 border-zinc-600 hover:bg-zinc-200 mt-2' style={{}}>
+                            Order.map((item, index) => ( 
+                                <tr key={index} className=' text-center bg-white hover:border-b-2 cursor-pointer  hover:border-zinc-600 hover:bg-zinc-200 mt-2' style={{}}>
                                     <td>{item.OrderId}</td>
                                     <td className=' py-4'>{item.customerName}  </td>
                                     <td>{item.email}</td>
@@ -85,14 +85,14 @@ const Order = () => {
                                     <td>{item.product}</td>
                                     <td>{item.Amount}</td>
                                     <td>{item.date}</td>
-                                   <td>
-                                    <select className=' bg-transparent p-1 border-zinc-400 border outline-none rounded-md'>
-                                        <option value="pending">pending</option>
-                                        <option value="processing">processing</option>
-                                        <option value="dispatched">dispatched</option>
-                                        <option value="returned">returned</option>
-                                    </select>
-                                   </td>
+                                    <td>
+                                        <select className=' bg-transparent p-1 border-zinc-400 border outline-none rounded-md'>
+                                            <option value="pending">pending</option>
+                                            <option value="processing">processing</option>
+                                            <option value="dispatched">dispatched</option>
+                                            <option value="returned">returned</option>
+                                        </select>
+                                    </td>
                                 </tr>
                             ))
                         }
